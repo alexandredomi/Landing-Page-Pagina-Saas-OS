@@ -453,7 +453,7 @@
       opacity: 0.9;
     }
 
-    .cta-final .cta-button {
+    .cta-final .cta-button{
       background: white;
       color: var(--primary);
       font-weight: 700;
@@ -815,7 +815,7 @@
             <li>Sem Taxas Adicionais</li>
           </ul>
 
-          <a href="#signup" class="cta-button" style="width: 100%;">Começar R$ 39,90</a>
+          <a href="#signup" class="cta-button" style="width: 100%;" id="cta-button-comprar">Começar R$ 39,90</a>
           <p style="text-align: center; font-size: 13px; color: var(--text-light); margin-top: 15px;">Teste <strong>gratis</strong> logo a baixo!</p>
         </div>
       </div>
@@ -857,7 +857,7 @@
         <p style="font-size: 16px; margin-bottom: 20px; color: var(--text);">
           <strong>Click a baixo e teste nosso sistema</strong> neste sistema de teste gratuito nao podera editar informacoes
         </p>
-        <a href="#pricing" class="cta-button">Testar Gratis</a>
+        <a href="https://alexandredomi.github.io/AddevOS/" class="cta-button" target="_blank">Testar Gratis</a>
       </div>
     </div>
   </section>
@@ -1076,7 +1076,7 @@
     }
 
     // Rastrear cliques em CTA buttons
-    document.querySelectorAll('.cta-button').forEach(btn => {
+    document.querySelectorAll('#cta-button-comprar').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         openModal();
