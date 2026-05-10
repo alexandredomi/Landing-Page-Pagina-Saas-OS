@@ -1,0 +1,42 @@
+DADOS FICTÍCIOS - DEMONSTRAÇÃO ADDEVOS
+
+1) CLIENTES (FICTÍCIOS)
+- Nome: Mariana Costa | Telefone: (11) 98811-2233 | Cidade: São Paulo/SP
+- Nome: Roberto Lima | Telefone: (21) 99744-5588 | Cidade: Rio de Janeiro/RJ
+- Nome: Paula Fernandes | Telefone: (31) 99102-7766 | Cidade: Belo Horizonte/MG
+- Nome: Diego Martins | Telefone: (51) 99887-4411 | Cidade: Porto Alegre/RS
+- Nome: Juliana Rocha | Telefone: (41) 99635-2299 | Cidade: Curitiba/PR
+
+2) ORDENS DE SERVIÇO (FICTÍCIAS)
+- OS #0001 | Cliente: Mariana Costa | Equipamento: iPhone 11 | Defeito: Não liga | Status: Em análise | Entrada: 08/05/2026
+- OS #0002 | Cliente: Roberto Lima | Equipamento: Notebook Dell Inspiron | Defeito: Tela piscando | Status: Aguardando peça | Entrada: 07/05/2026
+- OS #0003 | Cliente: Paula Fernandes | Equipamento: Samsung A32 | Defeito: Bateria descarregando rápido | Status: Em reparo | Entrada: 06/05/2026
+- OS #0004 | Cliente: Diego Martins | Equipamento: TV LG 43" | Defeito: Sem imagem | Status: Pronto para entrega | Entrada: 05/05/2026
+- OS #0005 | Cliente: Juliana Rocha | Equipamento: Xiaomi Redmi Note 12 | Defeito: Conector de carga com mau contato | Status: Finalizado | Entrada: 03/05/2026
+
+3) FINANCEIRO (FICTÍCIO)
+- Período: Maio/2026
+- Ordens abertas: 4
+- Ordens finalizadas: 17
+- Faturamento bruto: R$ 8.950,00
+- Custos com peças: R$ 2.740,00
+- Lucro estimado: R$ 6.210,00
+- Ticket médio: R$ 234,00
+
+4) MENSAGENS DE WHATSAPP (FICTÍCIAS)
+- "Olá, [Nome do Cliente]! Seu equipamento [Equipamento] já está em análise. Em breve enviamos atualização."
+- "Atualização da OS [Número]: peça necessária já foi solicitada. Previsão de chegada: 2 dias úteis."
+- "Boa notícia! A OS [Número] foi finalizada e seu equipamento está pronto para retirada."
+
+5) DEPOIMENTOS (FICTÍCIOS)
+- "Depois que comecei a usar o sistema, reduzi muito o tempo com papelada e consigo acompanhar tudo pelo celular." - Carlos Henrique, CH Assistência
+- "A organização das ordens de serviço ficou muito mais simples. Minha equipe trabalha com mais agilidade." - Fernanda Alves, FA Tech
+- "O controle financeiro ajudou a enxergar melhor o lucro de cada serviço. Recomendo demais." - Eduardo Nunes, Nunes Eletrônica
+
+6) LEGENDAS PARA CARROSSEL (FICTÍCIAS)
+- Slide 1: "Painel principal com visão completa das ordens em andamento."
+- Slide 2: "Acompanhe custos, faturamento e lucro em tempo real."
+- Slide 3: "Atenda clientes com rapidez usando histórico e contato direto por WhatsApp."
+
+Observação:
+- Todos os nomes, telefones e dados acima são fictícios e destinados apenas para demonstração.
