@@ -44,7 +44,7 @@
   <section id="features" class="features">
     <div class="container">
       <div class="section-header">
-        <h2>Tudo que você Precisa</h2>
+        <h2>Tudo que você precisa</h2>
         <p>Funcionalidades poderosas e intuitivas para gerenciar sua assistência técnica</p>
       </div>
 
@@ -257,6 +257,9 @@
               <h4>João Silva</h4>
               <p>Assistência Silva, São Paulo</p>
             </div>
+        <p class="carousel-swipe-hint" aria-hidden="true">
+          <i class="fa-solid fa-left-right"></i> Deslize para o lado para ver mais
+        </p>
           </div>
         </div>
 
@@ -370,7 +373,7 @@
   <!-- MODAL -->
   <div id="launchModal" class="modal">
     <div class="modal-content">
-      <h2>🚀 Em Breve!</h2>
+      <h2>Em Breve!</h2>
       <p>A plataforma AddevOS ainda não foi lançada. Estamos trabalhando duro para trazer a melhor solução em gestão de ordens de serviço para você!</p>
       <p>Fique atento para o lançamento em breve. Cadastre-se para receber notificações.</p>
       <button class="modal-close" onclick="closeModal()">Entendi</button>
@@ -418,7 +421,7 @@
 
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2026 AddevOS. Todos os direitos reservados. Desenvolvido com ❤️ para assistências técnicas.</p>
+        <p>&copy; 2026 AddevOS. Todos os direitos reservados. Desenvolvido com carinho para assistências técnicas.</p>
       </div>
     </div>
   </footer>
@@ -468,7 +471,9 @@
     const prevButton = document.getElementById('carouselPrev');
     const nextButton = document.getElementById('carouselNext');
     let currentSlide = 0;
-    let carouselTimer;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 40;
 
     function goToSlide(index) {
       if (!carouselTrack || carouselSlides.length === 0) return;
@@ -482,10 +487,16 @@
       }
     }
 
-    function startCarouselAutoPlay() {
-      if (carouselSlides.length < 2) return;
-      clearInterval(carouselTimer);
-      carouselTimer = setInterval(() => goToSlide(currentSlide + 1), 4500);
+    function handleSwipeGesture() {
+      const distance = touchEndX - touchStartX;
+
+      if (Math.abs(distance) < swipeThreshold) return;
+
+      if (distance < 0) {
+        goToSlide(currentSlide + 1);
+      } else {
+        goToSlide(currentSlide - 1);
+      }
     }
 
     if (carouselSlides.length > 0 && dotsContainer && prevButton && nextButton) {
@@ -493,29 +504,34 @@
         const dot = document.createElement('button');
         dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
         dot.setAttribute('aria-label', `Ir para slide ${index + 1}`);
-        dot.addEventListener('click', () => {
-          goToSlide(index);
-          startCarouselAutoPlay();
-        });
+        dot.addEventListener('click', () => goToSlide(index));
         dotsContainer.appendChild(dot);
       });
 
-      prevButton.addEventListener('click', () => {
-        goToSlide(currentSlide - 1);
-        startCarouselAutoPlay();
+      prevButton.addEventListener('click', () => goToSlide(currentSlide - 1));
+      nextButton.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+      carouselTrack.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
       });
 
-      nextButton.addEventListener('click', () => {
-        goToSlide(currentSlide + 1);
-        startCarouselAutoPlay();
+      carouselTrack.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipeGesture();
       });
 
       goToSlide(0);
-      startCarouselAutoPlay();
     }
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
